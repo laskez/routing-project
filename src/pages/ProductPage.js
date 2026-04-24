@@ -1,17 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import StarRating from '../components/StarRating';
-import products from '../data/products';
 import './ProductPage.css';
 
 const ProductPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const foundProduct = products.find(p => p.id === parseInt(id));
-    setProduct(foundProduct);
+    fetch(`https://fakestoreapi.com/products/${id}`)
+      .then(res => res.json())
+      .then(data => {
+        setProduct(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Ошибка:', error);
+        setLoading(false);
+      });
   }, [id]);
 
   const goBack = () => {
@@ -19,8 +27,12 @@ const ProductPage = () => {
   };
 
   const formatPrice = (price) => {
-    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    return Math.round(price * 92.5).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
   };
+
+  if (loading) {
+    return <div className="loading">Загрузка товара...</div>;
+  }
 
   if (!product) {
     return (
@@ -42,7 +54,7 @@ const ProductPage = () => {
       <div className="product-content">
         <div className="product-image-wrapper">
           <img 
-            src={product.image} 
+            src={product.image}
             alt={product.title}
             className="product-detail-image"
           />
