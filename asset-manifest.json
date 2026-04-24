@@ -1,20 +1,14 @@
 {
   "files": {
     "main.css": "/routing-project/static/css/main.0d6d0ed9.css",
-    "main.js": "/routing-project/static/js/main.a8c09dc3.js",
-    "static/media/PC.png": "/routing-project/static/media/PC.f773d632b7d6697ce072.png",
-    "static/media/pc-mouse.png": "/routing-project/static/media/pc-mouse.edc2f7b676db3aafccfc.png",
-    "static/media/keyboard.png": "/routing-project/static/media/keyboard.91e31acd314f61525008.png",
-    "static/media/notebook.png": "/routing-project/static/media/notebook.8a16ccb17adc1be9169d.png",
-    "static/media/headphones.png": "/routing-project/static/media/headphones.2a6a0aff99bbf670f113.png",
-    "static/media/Camera.png": "/routing-project/static/media/Camera.b0d6f3ec8684dd47b105.png",
+    "main.js": "/routing-project/static/js/main.baa50de0.js",
     "static/media/134.jpg": "/routing-project/static/media/134.adb914e0d0c85d54ed30.jpg",
     "index.html": "/routing-project/index.html",
     "main.0d6d0ed9.css.map": "/routing-project/static/css/main.0d6d0ed9.css.map",
-    "main.a8c09dc3.js.map": "/routing-project/static/js/main.a8c09dc3.js.map"
+    "main.baa50de0.js.map": "/routing-project/static/js/main.baa50de0.js.map"
   },
   "entrypoints": [
     "static/css/main.0d6d0ed9.css",
-    "static/js/main.a8c09dc3.js"
+    "static/js/main.baa50de0.js"
   ]
 }
