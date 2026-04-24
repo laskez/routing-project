@@ -35,7 +35,7 @@ const ProductsPage = () => {
 
   return (
     <div className="products-container">
-      <h1>⚡︎ LEGION PC ⚡︎</h1>
+      <h1>⚚ WEAR ⚚</h1>
       <div className="products-grid">
         {products.map(product => (
           <div 
