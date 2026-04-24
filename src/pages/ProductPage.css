@@ -94,7 +94,8 @@
 }
 
 @media (max-width: 600px) {
-  .products-grid {
+  .product-content {
     grid-template-columns: 1fr;
+    padding: 15px;
   }
 }
